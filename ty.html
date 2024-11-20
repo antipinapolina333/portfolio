@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <style>
+        body { 
+    font-family: Calibri, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f9f9fa; 
+    font-size: 16px; 
+} 
+
+.image-wrapper {
+    flex: 1 0 21%; /* Используйте 21% для трех картинок в строку с небольшим отступом */
+    box-sizing: border-box; 
+    text-align: center; 
+    overflow: hidden; 
+}
+
+
+
+#featured { 
+    display: flex; 
+    flex-wrap: wrap; /* Позволяет обернуть элементы при недостатке места */
+    justify-content: space-between; /* Увеличивает расстояние между элементами */
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 30px 0; 
+} 
+
+.image-wrapper { 
+    flex: 1 0 21%; /* Меняем на 21% для распределения, чтобы при изменении разрешения все равно были 4 колонки */
+    box-sizing: border-box; 
+    text-align: center; 
+    overflow: hidden; 
+} 
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out; 
+} 
+
+h2 { 
+    text-align: center;  
+    margin-bottom: 40px;  
+} 
+
+    </style>
+</head>
+<body>
+    <section id="featured">
+        <div class="image-wrapper">
+            <a href="one.html"><img src="img/gr/photo_5332377867545336362_x(2).jpg" alt="Диплом 1"></a>
+        </div>
+        <div class="image-wrapper">
+            <a href="two.html"><img src="img/gr/photo_5332377867545336363_y(2).jpg" alt="Диплом 2"></a>
+        </div>
+        <div class="image-wrapper">
+            <a href="three.html"><img src="img/gr/photo_5332377867545336390_y(2).jpg" alt="Диплом 3"></a>
+        </div>
+</section>
+        <section id="featured">
+        <div class="image-wrapper">
+            <a href="three.html"><img src="img/gr/photo_5332377867545336391_y(2).jpg" alt="Диплом 3"></a>
+        </div>
+
+        <div class="image-wrapper">
+            <a href="one.html"><img src="img/gr/photo_5332377867545336494_x(2).jpg" alt="Диплом 1"></a>
+        </div>
+        <div class="image-wrapper">
+            <a href="two.html"><img src="img/gr/photo_5334629667359023376_x(2).jpg" alt="Диплом 2"></a>
+        </div></section>
+        <section id="featured">
+        <div class="image-wrapper">
+            <a href="three.html"><img src="img/gr/photo_5377537739265793492_x(2).jpg" alt="Диплом 3"></a>
+        </div>
+        <div class="image-wrapper">
+            <a href="three.html"><img src="img/gr/photo_5377537739265793493_x(2).jpg" alt="Диплом 3"></a>
+
+            <div class="image-wrapper">
+                <a href="one.html"><img src="img/gr/photo_5377728169525761409_y(2).jpg" alt="Диплом 1"></a>
+            </div></section>
+            <section id="featured">
+            <div class="image-wrapper">
+                <a href="two.html"><img src="img/gr/photo_5377728169525761410_y(2).jpg" alt="Диплом 2"></a>
+            </div>
+            <div class="image-wrapper">
+                <a href="three.html"><img src="img/gr/photo_5377728169525761411_y(2).jpg" alt="Диплом 3"></a>
+            </div>
+            <div class="image-wrapper">
+                <a href="three.html"><img src="img/gr/photo_5377728169525761412_y(2).jpg" alt="Диплом 3"></a>
+
+            <div class="image-wrapper">
+                <a href="three.html"><img src="img/gr/photo_5377728169525761413_y(2).jpg" alt="Диплом 3"></a>
+        </div>
+    </section>
+</body>
+</html>

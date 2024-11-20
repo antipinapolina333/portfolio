@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9fa; /* Фоновая заливка вместо изображения */
+            font-size: 16px;
+        }
+        
+        #featured {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px; /* Максимальная ширина секции с изображениями */
+            margin: auto; /* Центрирование секции по горизонтали */
+            padding: 30px 0; /* Внешние отступы сверху и снизу */
+        }
+
+        .image-wrapper {
+            flex-grow: 1;
+            max-width: calc(100% / 3); /* Чтобы всегда было три колонки */
+            box-sizing: border-box;
+            text-align: center; /* Центрируем изображения внутри блоков */
+            overflow: hidden; /* Скрываем излишек при увеличении изображений */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer; /* Указатель мыши изменится на руку при наведении */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h2 {
+            text-align: center; 
+            margin-bottom: 40px; 
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Секция с изображениями -->
+    <section id="featured">
+        <div class="image-wrapper">
+            <a href="one.html"><img src="img/gr/kkkk.jpg" alt="Диплом 1"></a>
+        </div>
+        <div class="image-wrapper">
+            <a href="two.html"><img src="img/gr/photo_5323410899249262099_y.jpg" alt="Диплом 2"></a>
+        </div>
+        <div class="image-wrapper">
+            <a href="three.html"><img src="img/gr/photo_5323410899249262100_y.jpg" alt="Диплом 3"></a>
+        </div>
+    </section>
+</body>
+</html>
