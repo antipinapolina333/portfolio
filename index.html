@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif; 
@@ -29,6 +30,7 @@
             box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
             max-width: 800px;
             margin: 0 auto;
+            width: 100%;
         }
         img {
             transition: transform 0.3s;
@@ -39,27 +41,50 @@
             display: flex;
             flex-direction: column; /* Размещаем ссылки по вертикали */
             align-items: center; /* Центрируем ссылки по горизонтали */
+            gap: 12px; /* Равномерные отступы между кнопками */
         }
-        nav a {
-            margin-bottom: 10px; /* Отступ между ссылками */
+        
+        .nav-btn {
+            margin-bottom: 0;
             text-decoration: none;
             color: #333;
             font-size: 18px; 
-            padding: 10px 20px;
-            border-radius: 5px; 
-            background-color: rgba(255, 255, 255, 0.7); 
-            transition: background-color 0.3s;
+            padding: 14px 30px;
+            border-radius: 10px; 
+            background-color: rgba(255, 255, 255, 0.9); 
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
-        nav a:hover {
-            background-color: rgba(0,0,0,0.2);
+        
+        .nav-btn:hover {
+            background-color: rgba(0, 123, 255, 0.9);
             color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border-color: rgba(0, 123, 255, 0.5);
         }
+        
+        .nav-btn i {
+            font-size: 16px;
+        }
+        
         h2 {
             color: #333;
             font-size: 40px; 
             margin-bottom: 20px;
             font-weight: 700;
+            text-align: center;
         }
+        
         .background-image {
             position: absolute; 
             top: 0; 
@@ -70,6 +95,7 @@
             opacity: 0.5; 
             z-index: -1; 
         }  
+        
         .photo {
             width: 300px; 
             height: 300px; 
@@ -77,6 +103,105 @@
             object-fit: cover; 
             margin: 20px auto; 
             display: block; 
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        /* Стили для блока контактов */
+        .contacts-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .contacts-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .contacts-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        .contacts-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            padding: 14px 25px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-width: 200px;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .telegram-btn {
+            background-color: rgba(0, 136, 204, 0.9);
+            color: white;
+        }
+        
+        .telegram-btn:hover {
+            background-color: rgba(0, 119, 181, 0.9);
+            border-color: rgba(0, 136, 204, 0.5);
+        }
+        
+        .email-btn {
+            background-color: rgba(220, 76, 100, 0.9);
+            color: white;
+        }
+        
+        .email-btn:hover {
+            background-color: rgba(193, 58, 82, 0.9);
+            border-color: rgba(220, 76, 100, 0.5);
+        }
+        
+        .contact-icon {
+            font-size: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            #wrapper {
+                padding: 25px;
+                margin: 20px;
+            }
+            
+            h2 {
+                font-size: 32px;
+            }
+            
+            .nav-btn, .contact-btn {
+                width: 90%;
+                padding: 12px 20px;
+            }
+            
+            .photo {
+                width: 250px;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -85,22 +210,33 @@
     <div id="wrapper">
         <img src="img/photo_5323410899249262067_y.jpg" alt="Фото" class="photo">
         <h2>Электронное портфолио студентки ГПОАУ АО АПК Антипиной Полины</h2>
+        
         <nav>
-            <a href="one.html">1 курс</a>
-            <a href="ty.html">2 курс </a>
-            <a href="three.html">3 курс</a>
-            <a href="proekt.html">Проекты</a>
-            <section id="main-content">
-                <p>Связаться со мной можно в:</p>
-                <ul class="contact__list">
-                    <li>
-                        <a href="https://t.me/Polains" target="_blank" class="menu__link">
-                        telegram
-                        </a>
-                    </li></h2> 
-            </header> 
-            </section>
+            <a href="one.html" class="nav-btn">
+                <i class="fas fa-graduation-cap"></i> 1 курс
+            </a>
+            <a href="ty.html" class="nav-btn">
+                <i class="fas fa-book-open"></i> 2 курс
+            </a>
+            <a href="three.html" class="nav-btn">
+                <i class="fas fa-chart-line"></i> 3 курс
+            </a>
+            <a href="he.html" class="nav-btn">
+                <i class="fas fa-university"></i> 4 курс
+            </a>
+            <a href="proekt.html" class="nav-btn">
+                <i class="fas fa-project-diagram"></i> Проекты
+            </a>
         </nav>
+        
+        <section class="contacts-section">
+            <h3 class="contacts-title">Связаться со мной</h3>
+            <div class="contacts-container">
+                <a href="https://t.me/Polains" target="_blank" class="contact-btn telegram-btn">
+                    <i class="fab fa-telegram contact-icon"></i> Telegram
+                </a>
+            </div>
+        </section>
     </div>
 </body>
 </html>
